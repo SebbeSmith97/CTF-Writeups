@@ -20,7 +20,7 @@ We got the following information about the password:
 - Can be found in the largest known Mersenne prime number [M136279841](M136279841.zip)
 
 
-After some research I discovered that the [hash](hash.txt) is a **bcrypt**-hash with the **cost** of **05** and **salt tJ5qkcBGrjiRfZZAlkSsP.**
+After some research online and with [hashid](https://pypi.org/project/hashID/) I discovered that the [hash](hash.txt) is a **bcrypt**-hash with the **cost** of **05** and **salt tJ5qkcBGrjiRfZZAlkSsP.**
 
 
 ```bash
