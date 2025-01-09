@@ -14,9 +14,7 @@ Hash: $2y$05$tJ5qkcBGrjiRfZZAlkSsP.kcVStH7oCzsery3nN1sgXk02xThNck6
 
 ## Solution
 
-After some research I discovered that the hash is a bcrypt-hash
-$2<a/b/x/y>$[cost]$[22 character salt][31 character hash]
-
+After some research I discovered that the hash is a **bcrypt**-hash with the **cost of 05** and **salt tJ5qkcBGrjiRfZZAlkSsP.**
 
 ```bash
 cb@ideapad:~/Documents/CTF$ hashid hash.txt 
