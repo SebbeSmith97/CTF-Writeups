@@ -14,12 +14,14 @@ Hash: $2y$05$tJ5qkcBGrjiRfZZAlkSsP.kcVStH7oCzsery3nN1sgXk02xThNck6
 
 ## Solution
 
-After some research I discovered that the [hash](hash.txt) is a **bcrypt**-hash with the **cost** of **05** and **salt tJ5qkcBGrjiRfZZAlkSsP.**
-
-We also got the following information about the password:
+We got the following information about the password:
 - Only consist of numbers [0-9]
 - At least 10 characters long
 - Can be found in the largest known Mersenne prime number [M136279841](M136279841.zip)
+
+
+After some research I discovered that the [hash](hash.txt) is a **bcrypt**-hash with the **cost** of **05** and **salt tJ5qkcBGrjiRfZZAlkSsP.**
+
 
 ```bash
 cb@ideapad:~/Documents/CTF$ hashid hash.txt 
