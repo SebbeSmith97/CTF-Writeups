@@ -1,5 +1,6 @@
 # Prime Suspects
 Author: Mikael Svall
+
 Category: Hash Cracking
 
 ## Description
