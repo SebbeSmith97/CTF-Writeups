@@ -11,3 +11,14 @@ If you manage to crack the hash, you also found the flag, wrap it in the format 
 The answer lies in the prime.
 
 Hash: $2y$05$tJ5qkcBGrjiRfZZAlkSsP.kcVStH7oCzsery3nN1sgXk02xThNck6
+
+## Solution
+
+```bash
+cb@ideapad:~/Documents/CTF$ hashid hash.txt 
+--File 'hash.txt'--
+Analyzing '$2y$05$tJ5qkcBGrjiRfZZAlkSsP.kcVStH7oCzsery3nN1sgXk02xThNck6'
+[+] Blowfish(OpenBSD) 
+[+] Woltlab Burning Board 4.x 
+[+] bcrypt 
+```
