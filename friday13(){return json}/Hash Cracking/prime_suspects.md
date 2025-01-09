@@ -1,5 +1,6 @@
 # Prime Suspects
-Author: Mikael Svall  Category: Hash Cracking
+Author: Mikael Svall
+Category: Hash Cracking
 
 ## Description
 Json's notorious ransomware gang has unveiled what they claim to be an uncrackable hashing algorithm, derived from the digits of the largest known prime number. Mocking the world, they have publicly shared the hash of their master password, confident no one can break the encryption.
