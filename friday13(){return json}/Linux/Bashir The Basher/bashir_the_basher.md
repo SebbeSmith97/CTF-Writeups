@@ -33,9 +33,19 @@ Once connected we run the following command to check if we're in a restricted Ba
 rbash
 ```
 
-Running the following commands indicates that the PATH environment variable is set to /tmp/bin, which means only commands located in /tmp/bin are accesible for use.
+Running the following commands indicates that the PATH environment variable is set to /tmp/bin, which means only commands located in /tmp/bin are accessible for use.
 
 ```
 1d53a90cb73:~$ echo $PATH
 /tmp/bin
+```
+
+Listing the contents of /tmp/bin to see the accessible commands.
+
+```
+1d53a90cb73:~$ ls -l /tmp/bin
+total 2376
+-rwxr-xr-x  1 bashir  bashir  808712 Dec 13 10:42 echo  
+-rwxr-xr-x  1 bashir  bashir  808712 Dec 13 10:42 ls
+-rwxr-xr-x  1 bashir  bashir  808712 Dec 13 10:42 pwd
 ```
