@@ -24,10 +24,21 @@ After some research online and with [hashid](https://pypi.org/project/hashID/) I
 
 
 ```bash
-cb@ideapad:~/Documents/CTF$ hashid hash.txt 
+cb@ctf:~/ctf$ hashid hash.txt 
 --File 'hash.txt'--
 Analyzing '$2y$05$tJ5qkcBGrjiRfZZAlkSsP.kcVStH7oCzsery3nN1sgXk02xThNck6'
 [+] Blowfish(OpenBSD) 
 [+] Woltlab Burning Board 4.x 
 [+] bcrypt 
+```
+
+I need to extract all of the substrings from the prime number as potential password candidates. I started out by assuming the password's length consists of 10 characters, planning on expanding it further. I saved the prime number as m136279841.txt and divided it up in a new textfile candidates.txt by using awk.
+
+```
+awk '{ 
+    prime=$0; 
+    for (i=1; i<=length(prime)-9; i++) { 
+        print substr(prime,i,10) 
+    } 
+}' prime.txt > candidates.txt
 ```
