@@ -32,3 +32,10 @@ Once connected we run the following command to check if we're in a restricted Ba
 1d53a90cb73:~$ echo $0
 rbash
 ```
+
+Running the following commands indicates that the PATH environment variable is set to /tmp/bin, which means only commands located in /tmp/bin are accesible for use.
+
+```
+1d53a90cb73:~$ echo $PATH
+/tmp/bin
+```
