@@ -6,6 +6,8 @@ Category: Steganography
 ## Description
 Hello.  We are looking for supernatural individuals.  To find them, we have devised a mysterious test.
 
+![Cicada](cicada.jpg)
+
 There is something strange hidden in this image.
 
 Find it, and it will lead you on the spiritual journey to finding us.  We look forward to meeting the few ghosts, demons and djinns that will make it all the way through.
