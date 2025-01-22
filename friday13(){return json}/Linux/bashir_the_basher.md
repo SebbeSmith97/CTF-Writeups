@@ -3,13 +3,17 @@
 Category: Linux
 
 ## Description
-Json's notorious ransomware gang has unveiled what they claim to be an uncrackable hashing algorithm, derived from the digits of the largest known [prime number](M136279841.zip). Mocking the world, they have publicly shared the hash of their master password, confident no one can break the encryption.
+Bashir "the Head Basher", a notorious figure in both the criminal underworld and the hacking community. Once an infamous serial killer known for killing by bashing his victim's head in, Bashir's skillset has taken a dark, digital turn. After escaping a lifetime sentence from a maximum-security prison through sheer cunning, he's now applying his talents to the blackhat hacker trade.
 
-Crypto analysts believe the password is composed of digits only, sourced from this massive prime. For maximum security, the gang ensured the password is at least 10 digits long, hidden deep within the prime’s vast expanse.
-If you manage to crack the hash, you also found the flag, wrap it in the format O24{cracked_hash_here}
-The answer lies in the prime.
+Known for his unmatched ability to break out of even the most restrictive shells. Whether it's a highly locked-down server or a poorly configured honeypot, Bashir relentlessly hammering away at any restrictions until he’s free.
 
-Hash: $2y$05$tJ5qkcBGrjiRfZZAlkSsP.kcVStH7oCzsery3nN1sgXk02xThNck6
+He's now looking for a disciple and have setup various training environments scattered all over the internet where he can evaluate methods executed by his prospects. Only those with the sharpest minds and deepest knowledge of shell environments will prevail. Do you have what it takes to become the next Bashir the Basher? Find the flag and prove your at least as good as Bashir himself!
+
+Message from the Author: There is at least three ways to solve this challenge (seven, counting methods prevented by the author). How many can you find?
+
+Password: bAsh-b4sher-nUmba-0ne!
+
+ssh bashir@bashbashing.appsec.nu -p 24222
 
 ## Solution
 
