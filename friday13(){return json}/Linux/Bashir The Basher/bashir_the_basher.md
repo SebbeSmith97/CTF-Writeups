@@ -49,3 +49,31 @@ total 2376
 -rwxr-xr-x  1 bashir  bashir  808712 Dec 13 10:42 ls
 -rwxr-xr-x  1 bashir  bashir  808712 Dec 13 10:42 pwd
 ```
+
+While listing the contents we can see the restrited-section where the flag probaly is located.
+
+```
+1d53aa90cb73:~$ ls -la
+total 32
+drwxr-sr-x    1 bashir   bashir        4096 Dec 14 17:10 .
+drwxr-xr-x    1 root     root          4096 Dec 13 10:42 ..
+----------    1 bashir   bashir        6498 Dec 14 17:10 .bash_history
+-rw-r--r--    1 root     bashir         893 Dec 13 12:26 .bash_profile
+-rw-r--r--    1 bashir   bashir         893 Dec 13 12:26 .bashrc
+drwxr-sr-x    1 root     bashir        4096 Dec 13 12:29 restricted-section
+```
+
+Let's see what's in there.
+
+```
+1d53aa90cb73:~$ ls -l restricted-section/
+total 4
+-rw-r--r--    1 root     root            49 Dec 13 12:29 flag.txt
+```
+
+Now we only need to use the command echo to read the flag.
+
+```
+1d53aa90cb73:~$ echo $(<restricted-section/flag.txt)
+O24{R3StRIC7iOn_!$_tH3_M0TheR_7O_4lL_Cr3@TiVITY}
+```
