@@ -25,3 +25,10 @@ Connect to the remote SSH enviroment with the following credentials
 ssh bashir@bashbashing.appsec.nu -p 24222
 password: bAsh-b4sher-nUmba-0ne!
 ```
+
+Once connected we run the following command to check if we're in a restricted Bash shell.
+
+```
+1d53a90cb73:~$ echo $0
+rbash
+```
