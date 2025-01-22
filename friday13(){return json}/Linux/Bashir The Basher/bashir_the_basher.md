@@ -21,6 +21,7 @@ Unfortunately the challengepage and subdomain are down, so I cannot replicated t
 
 Connect to the remote SSH enviroment with the following credentials
 
-``` ssh bashir@bashbashing.appsec.nu -p 24222
+```
+ssh bashir@bashbashing.appsec.nu -p 24222
 password: bAsh-b4sher-nUmba-0ne!
 ```
