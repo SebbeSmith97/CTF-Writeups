@@ -40,5 +40,34 @@ awk '{
     for (i=1; i<=length(prime)-9; i++) { 
         print substr(prime,i,10) 
     } 
-}' prime.txt > candidates.txt
+}' m136279841.txt > candidates.txt
 ```
+
+Running the mode 3200 for Bcrypt with wordlist on the hash (with disabled potfile to re-run) got me the following sequence of numbers and flag O24{9999903898}.
+
+```
+cb@ctf:~/ctf$ hashcat -m 3200 -a 0 --potfile-disable hash.txt candidates.txt
+
+$2y$05$tJ5qkcBGrjiRfZZAlkSsP.kcVStH7oCzsery3nN1sgXk02xThNck6:9999903898
+
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 3200 (bcrypt $2*$, Blowfish (Unix))
+Hash.Target......: $2y$05$tJ5qkcBGrjiRfZZAlkSsP.kcVStH7oCzsery3nN1sgXk...ThNck6
+Time.Started.....: Wed Jan 22 15:46:23 2025 (18 mins, 17 secs)
+Time.Estimated...: Wed Jan 22 16:04:40 2025 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (candidates.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:    10117 H/s (3.05ms) @ Accel:16 Loops:4 Thr:1 Vec:1
+Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
+Progress.........: 11070464/37742368 (29.33%)
+Rejected.........: 0/11070464 (0.00%)
+Restore.Point....: 11070208/37742368 (29.33%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:28-32
+Candidate.Engine.: Device Generator
+Candidates.#1....: 8988830636 -> 8867018436
+Hardware.Mon.#1..: Temp: 68c Util:  0%
+
+Started: Wed Jan 22 15:46:16 2025
+Stopped: Wed Jan 22 16:04:42 2025
