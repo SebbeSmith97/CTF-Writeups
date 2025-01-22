@@ -17,3 +17,4 @@ ssh bashir@bashbashing.appsec.nu -p 24222
 
 ## Solution
 
+Unfortunately the challengepage and subdomain are down, so I cannot replicated the challenge with screenshots. I will walk through the steps I took to solve the challenge in text.
