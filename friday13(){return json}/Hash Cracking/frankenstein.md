@@ -17,6 +17,7 @@ As the challenge suggests the hash is "cut" in some sort of way - leaking blood 
 When trying to identify the hash, it looks like a MD5 containing 32 hexadecimal characters. Since we suspect it might contain two truncated hashes, we try to split it up into two hashes containing 16 characters each.
 
 **First half:** 3d31ef4df92e0f21
+
 **Second half:** db3f3946ba271882
 
 ```
