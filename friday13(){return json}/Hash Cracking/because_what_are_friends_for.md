@@ -31,6 +31,33 @@ We can specify what type of character we're expectng by using the following mask
 
 ?u → uppercase letter
 ?l → lowercase letter
+?s → special letter («space»!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~)
 ?d → digit
 
-If we combine the syntax with our clues we get something looking like *?u?l?l?l?l?l?l_?d?d*
+If we combine the syntax with our clues we get something looking like **?u?l?l?l?l?l?l?s?d?d** or **?u?l?l?l?l?l?s?s?d?d**. We can narrow it down a bit by trying to set specific characters such as an underscore - **?u?l?l?l?l?l?l?_?d?d**. We run hashcat with mode 900 for MD4 and -a for mask attack with the mentioned mask. This helped us obtain the flag O24{Wallman_13}.
+
+```
+cb@ctf:~/ctf$ hashcat -m 900 -a 3 hash.txt ?u?l?l?l?l?l?l_?d?d --potfile-disable
+
+bfe85af6a5012498d325db63aac5dd4a:Wallman_13               
+                                                          
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 900 (MD4)
+Hash.Target......: bfe85af6a5012498d325db63aac5dd4a
+Time.Started.....: Thu Jan 30 10:31:13 2025 (3 mins, 48 secs)
+Time.Estimated...: Thu Jan 30 10:35:01 2025 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Mask.......: ?u?l?l?l?l?l?l_?d?d [10]
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  1348.0 MH/s (1.42ms) @ Accel:1024 Loops:128 Thr:1 Vec:16
+Recovered........: 1/1 (100.00%) Digests (total), 1/1 (100.00%) Digests (new)
+Progress.........: 321137803264/803181017600 (39.98%)
+Rejected.........: 0/321137803264 (0.00%)
+Restore.Point....: 18268160/45697600 (39.98%)
+Restore.Sub.#1...: Salt:0 Amplifier:3328-3456 Iteration:0-128
+Candidate.Engine.: Device Generator
+Candidates.#1....: Mvrhzmq_52 -> Qalbiri_13
+Hardware.Mon.#1..: Temp: 75c Util: 91%
+```
+
