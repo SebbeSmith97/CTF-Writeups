@@ -26,3 +26,11 @@ After reading the challenge we got some clues regarding the password:
 The hint about 1990 suggests an outdated hashing algorithm, likely MD4, which was used during that era. MD4 was developed by Ronald Rivest in 1990 and later replaced by MD5 in 1991. Running hashid and hashcat auto detect also confirms it's most likely one of them.
 
 Hashcat has a built-in function for [mask attacks](https://hashcat.net/wiki/doku.php?id=mask_attack) where we can perform a more specified brute-force attack on the password.
+
+We can specify what type of character we're expectng by using the following mask characters:
+
+?u → uppercase letter
+?l → lowercase letter
+?d → digit
+
+If we combine the syntax with our clues we get something looking like *?u?l?l?l?l?l?l_?d?d*
