@@ -50,7 +50,7 @@ The following 11 hash-modes match the structure of your input hash:
    9900 | Radmin2                                                    | Operating System
    8600 | Lotus Notes/Domino 5                                       | Enterprise Application Software (EAS)
 ```
-After trying out all of them, the hash was cracked by using mode 4300 (md5(strtoupper(md5($pass))). This means that the password was first hashed with MD5, then converted to all uppercase and lastly hashed again with MD5. The flag obtained was O24{gr1mreaper}.
+After trying out all of them, the hash was cracked with hashcat by using mode 4300 (md5(strtoupper(md5($pass))) against the wordlist rockyou.txt. This means that the password was first hashed with MD5, then converted to all uppercase and lastly hashed again with MD5. The flag obtained was O24{gr1mreaper}.
 
 ```
 cb@ctf:~/ctf$ hashcat -m 4300 -a 0 --potfile-disable hash.txt rockyou.txt
